@@ -22,8 +22,8 @@ function getEntry (rootSrc) {
    return map;
 }
 
-const appEntry = { app: resolve('./src/main.js') }
-const pagesEntry = getEntry(resolve('./src'), 'pages/**/main.js')
+const appEntry = { app: resolve('./test/main.js') }
+const pagesEntry = getEntry(resolve('./test'), 'pages/**/main.js')
 const entry = Object.assign({}, appEntry, pagesEntry)
 
 module.exports = {
@@ -43,7 +43,7 @@ module.exports = {
     extensions: ['.js', '.vue', '.json'],
     alias: {
       'vue': 'mpvue',
-      '@': resolve('src')
+      '@': resolve('test')
     },
     symlinks: false,
     aliasFields: ['mpvue', 'weapp', 'browser'],
