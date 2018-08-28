@@ -10,13 +10,13 @@
       <picker-view indicator-style="height: 40px;" class="mpvue-picker-view">
         <block>
           <picker-view-column>
-            <div class="picker-item" v-for="(item,index) in provinceDataList" :key="index">{{item}}</div>
+            <div class="picker-item" v-for="(item,index) in provinceDataList" :key="index">{{item.label}}</div>
           </picker-view-column>
           <picker-view-column>
-            <div class="picker-item" v-for="(item,index) in cityDataList" :key="index">{{item}}</div>
+            <div class="picker-item" v-for="(item,index) in cityDataList" :key="index">{{item.label}}</div>
           </picker-view-column>
           <picker-view-column>
-            <div class="picker-item" v-for="(item,index) in areaDataList" :key="index">{{item}}</div>
+            <div class="picker-item" v-for="(item,index) in areaDataList" :key="index">{{item.label}}</div>
           </picker-view-column>
         </block>
       </picker-view>
@@ -25,13 +25,21 @@
 </template>
 
 <script>
+import provinceData from './city-data/province.js';
+import cityData from './city-data/city.js';
+import areaData from './city-data/area.js';
 export default {
   data() {
     return {
-      provinceDataList: [1, 2, 3],
-      cityDataList: [1, 2, 3],
-      areaDataList: [3, 4, 5]
+      provinceDataList: [],
+      cityDataList: [],
+      areaDataList: []
     };
+  },
+  created() {
+    this.provinceDataList = provinceData;
+    this.cityDataList = cityData[0];
+    this.areaDataList = areaData[0][0];
   },
   props: {
     /* 是否显示控件 */
@@ -127,6 +135,8 @@ export default {
 .picker-item {
   text-align: center;
   line-height: 40px;
+  text-overflow: ellipsis;
+  white-space: nowrap;
 }
 .mpvue-picker-view {
   position: relative;
