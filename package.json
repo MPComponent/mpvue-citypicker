@@ -11,7 +11,6 @@
     "lint": "eslint --ext .js,.vue src"
   },
   "dependencies": {
-    "fs": "0.0.1-security",
     "mpvue": "^1.0.11"
   },
   "devDependencies": {
@@ -56,6 +55,7 @@
     "webpack-bundle-analyzer": "^2.2.1",
     "semver": "^5.3.0",
     "shelljs": "^0.8.1",
+    "fs": "0.0.1-security",
     "uglifyjs-webpack-plugin": "^1.2.5",
     "optimize-css-assets-webpack-plugin": "^3.2.0",
     "ora": "^2.0.0",
