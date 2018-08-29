@@ -6,8 +6,7 @@
         <div class="mpvue-picker__action" @click="pickerCancel">取消</div>
         <div class="mpvue-picker__action" @click="pickerConfirm">确定</div>
       </div>
-      <!-- 三级联动 -->
-      <picker-view indicator-style="height: 40px;" class="mpvue-picker-view">
+      <picker-view indicator-style="height: 40px;" class="mpvue-picker-view" :value="pickerValue" @change="pickerChange">
         <block>
           <picker-view-column>
             <div class="picker-item" v-for="(item,index) in provinceDataList" :key="index">{{item.label}}</div>
@@ -31,15 +30,19 @@ import areaData from './city-data/area.js';
 export default {
   data() {
     return {
+      pickerValue: [0, 0, 0],
       provinceDataList: [],
       cityDataList: [],
       areaDataList: []
     };
   },
   created() {
+    this.handPickValueDefault(); // 对 pickerValueDefault 做兼容处理
     this.provinceDataList = provinceData;
-    this.cityDataList = cityData[0];
-    this.areaDataList = areaData[0][0];
+    this.cityDataList = cityData[this.pickerValueDefault[0]];
+    this.areaDataList =
+      areaData[this.pickerValueDefault[0]][this.pickerValueDefault[1]];
+    this.pickerValue = this.pickerValueDefault;
   },
   props: {
     /* 是否显示控件 */
@@ -64,15 +67,64 @@ export default {
     },
     pickerCancel() {
       this.showPicker = false;
+      this._$emit('onCancel');
     },
     pickerConfirm(e) {
       this.showPicker = false;
+      this._$emit('onConfirm');
     },
     showPickerView() {
       this.showPicker = true;
     },
+    handPickValueDefault() {
+      if (this.pickerValueDefault !== [0, 0, 0]) {
+        if (this.pickerValueDefault[0] > provinceData.length - 1) {
+          this.pickerValueDefault[0] = provinceData.length - 1;
+        }
+        if (this.pickerValueDefault[1] > cityData[this.pickerValueDefault[0]].length - 1) {
+          this.pickerValueDefault[1] = cityData[this.pickerValueDefault[0]].length - 1;
+        }
+        if (this.pickerValueDefault[2] > areaData[this.pickerValueDefault[0]][this.pickerValueDefault[1]].length - 1) {
+          this.pickerValueDefault[2] = areaData[this.pickerValueDefault[0]][this.pickerValueDefault[1]].length - 1;
+        }
+      }
+    },
     pickerChange(e) {
-      this.pickerValue = e.mp.detail.value;
+      let changePickerValue = e.mp.detail.value;
+      if (this.pickerValue[0] !== changePickerValue[0]) {
+        // 第一级发生滚动
+        this.cityDataList = cityData[changePickerValue[0]];
+        this.areaDataList = areaData[changePickerValue[0]][0];
+        changePickerValue[1] = 0;
+        changePickerValue[2] = 0;
+      } else if (this.pickerValue[1] !== changePickerValue[1]) {
+        // 第二级滚动
+        this.areaDataList =
+          areaData[changePickerValue[0]][changePickerValue[1]];
+        changePickerValue[2] = 0;
+      }
+      this.pickerValue = changePickerValue;
+      this._$emit('onChange');
+    },
+    _$emit(emitName) {
+      let pickObj = {
+        label: this._getLabel(),
+        value: this.pickerValue,
+        cityCode: this._getCityCode()
+      };
+      this.$emit(emitName, pickObj);
+    },
+    _getLabel() {
+      let pcikerLabel =
+        this.provinceDataList[this.pickerValue[0]].label +
+        '-' +
+        this.cityDataList[this.pickerValue[1]].label +
+        '-' +
+        this.areaDataList[this.pickerValue[2]].label;
+      return pcikerLabel;
+    },
+    _getCityCode() {
+      return this.areaDataList[this.pickerValue[2]].value;
     }
   }
 };
