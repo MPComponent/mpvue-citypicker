@@ -6,7 +6,8 @@
 </template>
 
 <script>
-import mpvueCityPicker from '../../../src/mpvueCityPicker.vue';
+// import mpvueCityPicker from '../../../src/mpvueCityPicker.vue';
+import mpvueCityPicker from 'mpvue-citypicker';
 export default {
   data() {
     return {
