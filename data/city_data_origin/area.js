@@ -15129,6 +15129,22 @@ var areaData = [{
   "name": "澎湖",
   "cityCode": "6617",
   "provinceCode": "66"
+},
+{
+  "code": "670101",
+  "name": "香港岛",
+  "cityCode": "6701",
+  "provinceCode": "67"
+}, {
+  "code": "670201",
+  "name": "九龙",
+  "cityCode": "6702",
+  "provinceCode": "67"
+}, {
+  "code": "670301",
+  "name": "新界",
+  "cityCode": "6703",
+  "provinceCode": "67"
 }]
 
 module.exports = areaData;

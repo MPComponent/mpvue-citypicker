@@ -1440,6 +1440,19 @@ var cityData = [{
     "code": "6617",
     "name": "澎湖",
     "provinceCode": "66"
+  },
+  {
+    "code": "6701",
+    "name": "香港岛",
+    "provinceCode": "67"
+  }, {
+    "code": "6702",
+    "name": "九龙",
+    "provinceCode": "67"
+  }, {
+    "code": "6703",
+    "name": "新界",
+    "provinceCode": "67"
   }
 ]
 module.exports = cityData;
