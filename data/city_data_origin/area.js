@@ -1,3 +1,4 @@
+/* eslint-disable */
 var areaData = [{
   "code": "110101",
   "name": "东城区",
@@ -15043,6 +15044,91 @@ var areaData = [{
   "name": "铁门关市",
   "cityCode": "6590",
   "provinceCode": "65"
+},{
+  "code": "660101",
+  "name": "台北",
+  "cityCode": "6601",
+  "provinceCode": "66"
+}, {
+  "code": "660201",
+  "name": "高雄",
+  "cityCode": "6602",
+  "provinceCode": "66"
+}, {
+  "code": "660301",
+  "name": "基隆",
+  "cityCode": "6603",
+  "provinceCode": "66"
+}, {
+  "code": "660401",
+  "name": "台中",
+  "cityCode": "6604",
+  "provinceCode": "66"
+}, {
+  "code": "660501",
+  "name": "台南",
+  "cityCode": "6605",
+  "provinceCode": "66"
+}, {
+  "code": "660601",
+  "name": "新竹",
+  "cityCode": "6606",
+  "provinceCode": "66"
+}, {
+  "code": "660701",
+  "name": "嘉义",
+  "cityCode": "6607",
+  "provinceCode": "66"
+}, {
+  "code": "660801",
+  "name": "宜兰",
+  "cityCode": "6608",
+  "provinceCode": "66"
+}, {
+  "code": "660901",
+  "name": "桃园",
+  "cityCode": "6609",
+  "provinceCode": "66"
+}, {
+  "code": "661001",
+  "name": "苗栗",
+  "cityCode": "6610",
+  "provinceCode": "66"
+}, {
+  "code": "661101",
+  "name": "彰化",
+  "cityCode": "6611",
+  "provinceCode": "66"
+}, {
+  "code": "661201",
+  "name": "南投",
+  "cityCode": "6612",
+  "provinceCode": "66"
+}, {
+  "code": "661301",
+  "name": "云林",
+  "cityCode": "6613",
+  "provinceCode": "66"
+}, {
+  "code": "661401",
+  "name": "屏东",
+  "cityCode": "6614",
+  "provinceCode": "66"
+},{
+  "code": "661501",
+  "name": "台东",
+  "cityCode": "6615",
+  "provinceCode": "66"
+}, {
+  "code": "661601",
+  "name": "花莲",
+  "cityCode": "6616",
+  "provinceCode": "66"
+}, {
+  "code": "661701",
+  "name": "澎湖",
+  "cityCode": "6617",
+  "provinceCode": "66"
 }]
 
 module.exports = areaData;
