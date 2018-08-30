@@ -1453,6 +1453,24 @@ var cityData = [{
     "code": "6703",
     "name": "新界",
     "provinceCode": "67"
+  },
+  {
+    "code": "6801",
+    "name": "澳门半岛",
+    "provinceCode": "68"
+  },
+  {
+    "code": "6802",
+    "name": "氹仔岛",
+    "provinceCode": "68"
+  }, {
+    "code": "6803",
+    "name": "路环岛",
+    "provinceCode": "68"
+  }, {
+    "code": "6804",
+    "name": "路氹城",
+    "provinceCode": "68"
   }
 ]
 module.exports = cityData;

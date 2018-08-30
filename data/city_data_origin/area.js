@@ -15145,6 +15145,27 @@ var areaData = [{
   "name": "新界",
   "cityCode": "6703",
   "provinceCode": "67"
+},{
+  "code": "680101",
+  "name": "澳门半岛",
+  "cityCode": "6801",
+  "provinceCode": "68"
+},
+{
+  "code": "680201",
+  "name": "氹仔岛",
+  "cityCode": "6802",
+  "provinceCode": "68"
+}, {
+  "code": "680301",
+  "name": "路环岛",
+  "cityCode": "6803",
+  "provinceCode": "68"
+}, {
+  "code": "680401",
+  "name": "路氹城",
+  "cityCode": "6804",
+  "provinceCode": "68"
 }]
 
 module.exports = areaData;
