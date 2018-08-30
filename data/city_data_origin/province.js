@@ -89,7 +89,7 @@ var provinceData = [{
   }, {
     "code": "64",
     "name": "宁夏回族自治区"
-  }, ,
+  },
   {
     "code": "65",
     "name": "新疆维吾尔自治区"
