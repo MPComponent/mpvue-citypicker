@@ -1,8 +1,8 @@
 # mpvue-citypicker
 
-> 基于 mpvue 框架的城市选择器，含唯一 code
+> 基于 mpvue 框架的城市选择器，含 code
 
-数据来源于 [Administrative-divisions-of-China](https://github.com/modood/Administrative-divisions-of-China),用 nodejs 对其数据进行了一定的重组。
+数据来源于 [Administrative-divisions-of-China](https://github.com/modood/Administrative-divisions-of-China),用 nodejs 对其数据进行了重组。
 
 ![npm version](https://img.shields.io/npm/v/mpvue-citypicker.svg?style=flat)
 ![download](https://img.shields.io/npm/dm/mpvue-citypicker.svg?style=flat)
@@ -18,7 +18,7 @@ npm install mpvue-picker --save
 * 在页面中使用
 ``` vue
 <template>
-    <mpvue-city-picker ref="mpvueCityPicker" :pickerValueDefault="pickerValueDefault" @onChange="onChange"      @onCancel="onCancel" @onConfirm="onConfirm"></mpvue-city-picker>
+    <mpvue-city-picker ref="mpvueCityPicker" :pickerValueDefault="pickerValueDefault" @onChange="onChange" @onCancel="onCancel" @onConfirm="onConfirm"></mpvue-city-picker>
 </template>
 
 <script>
@@ -59,8 +59,8 @@ this.$refs.mpvueCityPicker.show();
 ```
 ## 效果
 
-![mpvue-picker-demo01](https://github.com/KuangPF/mpvue-citypicker/blob/master/data/img/mpvue-citypicker01.png)
-![mpvue-picker-demo02](https://github.com/KuangPF/mpvue-citypicker/blob/master/src/img/mpvue-citypicker02.png)
+<img src="https://github.com/KuangPF/mpvue-citypicker/blob/master/data/img/mpvue-citypicker01.png" width="320px">
+<img src="https://github.com/KuangPF/mpvue-citypicker/blob/master/data/img/mpvue-citypicker02.png" width="320px">
 
 ## 参数说明
 
