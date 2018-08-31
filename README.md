@@ -57,10 +57,12 @@ export default {
 ``` javascript
 this.$refs.mpvueCityPicker.show();
 ```
-## 效果
 
-<img src="https://github.com/KuangPF/mpvue-citypicker/blob/master/data/img/mpvue-citypicker01.png" width="320px">
-<img src="https://github.com/KuangPF/mpvue-citypicker/blob/master/data/img/mpvue-citypicker02.png" width="320px">
+## 效果
+<figure class="half">
+  <img src="https://github.com/KuangPF/mpvue-citypicker/blob/master/data/img/mpvue-citypicker01.png" width="320px">
+  <img src="https://github.com/KuangPF/mpvue-citypicker/blob/master/data/img/mpvue-citypicker02.png" width="320px">
+<figure>
 
 ## 参数说明
 
