@@ -62,7 +62,7 @@ this.$refs.mpvueCityPicker.show();
 <figure class="half">
   <img src="https://github.com/KuangPF/mpvue-citypicker/blob/master/data/img/mpvue-citypicker01.png" width="320px">
   <img src="https://github.com/KuangPF/mpvue-citypicker/blob/master/data/img/mpvue-citypicker02.png" width="320px">
-<figure>
+</figure>
 
 ## 参数说明
 
