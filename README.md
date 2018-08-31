@@ -12,7 +12,7 @@
 
 * 安装
 ``` bash
-npm install mpvue-picker --save
+npm install mpvue-citypicker --save
 ```
 
 * 在页面中使用
