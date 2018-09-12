@@ -189,6 +189,7 @@ export default {
   line-height: 40px;
   text-overflow: ellipsis;
   white-space: nowrap;
+  font-size: 16px;
 }
 .mpvue-picker-view {
   position: relative;
