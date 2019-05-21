@@ -40,9 +40,10 @@ export default {
     this.handPickValueDefault(); // 对 pickerValueDefault 做兼容处理
     this.provinceDataList = provinceData;
     this.cityDataList = cityData[this.pickerValueDefault[0]];
-    this.areaDataList =
-      areaData[this.pickerValueDefault[0]][this.pickerValueDefault[1]];
-    this.pickerValue = this.pickerValueDefault;
+    this.areaDataList = areaData[this.pickerValueDefault[0]][this.pickerValueDefault[1]];
+    setTimeout(() => {
+      this.pickerValue = this.pickerValueDefault;
+    });
   },
   props: {
     /* 是否显示控件 */
@@ -161,7 +162,7 @@ export default {
   font-size: 17px;
 }
 .mpvue-picker__hd:after {
-  content: ' ';
+  content: " ";
   position: absolute;
   left: 0;
   bottom: 0;
