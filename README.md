@@ -59,10 +59,10 @@ this.$refs.mpvueCityPicker.show();
 ```
 
 ## 效果
-<figure class="half">
+<div align="center">
   <img src="https://github.com/KuangPF/mpvue-citypicker/blob/master/data/img/mpvue-citypicker01.png" width="320px">
   <img src="https://github.com/KuangPF/mpvue-citypicker/blob/master/data/img/mpvue-citypicker02.png" width="320px">
-</figure>
+</div>
 
 ## 参数说明
 
