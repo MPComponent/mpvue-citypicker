@@ -1,17 +1,18 @@
 <template>
   <div class="mpvue-city-picker">
     <button type="default" @click="showCityPicker">城市选择</button>
-    <mpvue-city-picker ref="mpvueCityPicker" :pickerValueDefault="pickerValueDefault" @onChange="onChange" @onCancel="onCancel" @onConfirm="onConfirm"></mpvue-city-picker>
+    <mpvue-city-picker ref="mpvueCityPicker" :pickerValueDefault="pickerValueDefault" @onChange="onChange" :themeColor='themeColor' @onCancel="onCancel" @onConfirm="onConfirm"></mpvue-city-picker>
   </div>
 </template>
 
 <script>
-// import mpvueCityPicker from '../../../src/mpvueCityPicker.vue';
-import mpvueCityPicker from 'mpvue-citypicker';
+import mpvueCityPicker from '../../../src/mpvueCityPicker.vue';
+// import mpvueCityPicker from 'mpvue-citypicker';
 export default {
   data() {
     return {
-      pickerValueDefault: [0, 0, 1]
+      pickerValueDefault: [0, 0, 1],
+      themeColor: '#4A8AE9'
     };
   },
   components: {
