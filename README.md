@@ -73,6 +73,12 @@ this.$refs.mpvueCityPicker.show();
 * 是否必填： 否
 * 默认值：[0, 0, 0]
 
+### themeColor
+* 说明：主题色
+* 类型：String
+* 可选值：-
+* 是否必填： 否
+* 默认值：#1aad19
 
 ### onChange
 * 说明：citypicker 组件滚动时回调，返回选中的返回 label , value 以及 code 的值
