@@ -3985,17 +3985,10 @@ move-concurrently@^1.0.1:
     rimraf "^2.5.4"
     run-queue "^1.0.3"
 
-mpvue-citypicker@1.0.4:
-  version "1.0.4"
-  resolved "https://registry.npmjs.org/mpvue-citypicker/-/mpvue-citypicker-1.0.4.tgz#d04ada90481d64d2c714a4c0d0de0c9ecfea3004"
-  integrity sha512-zIMm8V6SI+9CwT/SI3PWVPOHY5fTLdpSADbu7FfZjQD+uS41Hm/DJfqm6AZCLwIQyU2n0PV/L3JmMVeskjRSag==
-  dependencies:
-    mpvue "1.0.18"
-
-mpvue-loader@1.1.2:
-  version "1.1.2"
-  resolved "https://registry.npm.taobao.org/mpvue-loader/download/mpvue-loader-1.1.2.tgz#71b4247baaf78856b6aaa6ca055aa974da07949f"
-  integrity sha1-cbQke6r3iFa2qqbKBVqpdNoHlJ8=
+mpvue-loader@^2.0.0:
+  version "2.0.1"
+  resolved "https://registry.npm.taobao.org/mpvue-loader/download/mpvue-loader-2.0.1.tgz#6220e70ef1fecb9d29d5e44f46e107b9081be8e3"
+  integrity sha1-YiDnDvH+y50p1eRPRuEHuQgb6OM=
   dependencies:
     babelon "^1.0.5"
     consolidate "^0.14.0"
@@ -4017,10 +4010,10 @@ mpvue-loader@1.1.2:
     vue-style-loader "^3.0.0"
     vue-template-es2015-compiler "^1.5.3"
 
-mpvue-template-compiler@1.0.18:
-  version "1.0.18"
-  resolved "https://registry.npm.taobao.org/mpvue-template-compiler/download/mpvue-template-compiler-1.0.18.tgz#3c066fc5ac09b953c7be0dbab8b9f7fda87c74ef"
-  integrity sha1-PAZvxawJuVPHvg26uLn3/ah8dO8=
+mpvue-template-compiler@^2.0.0:
+  version "2.0.6"
+  resolved "https://registry.npm.taobao.org/mpvue-template-compiler/download/mpvue-template-compiler-2.0.6.tgz#692dac244ff9babae9b7d206e6572d0f8e34104a"
+  integrity sha1-aS2sJE/5urrpt9IG5lctD440EEo=
   dependencies:
     de-indent "^1.0.2"
     he "^1.1.0"
@@ -4030,10 +4023,10 @@ mpvue-webpack-target@^1.0.0:
   resolved "https://registry.npm.taobao.org/mpvue-webpack-target/download/mpvue-webpack-target-1.0.3.tgz#07ac9f89fdf0aabfb6bd079c7f068c94666006a9"
   integrity sha1-B6yfif3wqr+2vQecfwaMlGZgBqk=
 
-mpvue@1.0.18:
-  version "1.0.18"
-  resolved "https://registry.npm.taobao.org/mpvue/download/mpvue-1.0.18.tgz#f784e5659641b6b338f12b6dc3dbc2c4879287f6"
-  integrity sha1-94TlZZZBtrM48Sttw9vCxIeSh/Y=
+mpvue@^2.0.0:
+  version "2.0.6"
+  resolved "https://registry.npm.taobao.org/mpvue/download/mpvue-2.0.6.tgz#e0f06340f0887848de4bcf1368cd0ffce812bdcb"
+  integrity sha1-4PBjQPCIeEjeS88TaM0P/OgSvcs=
 
 ms@2.0.0:
   version "2.0.0"

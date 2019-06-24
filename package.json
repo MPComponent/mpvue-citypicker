@@ -19,9 +19,7 @@
     "build": "node build/build.js",
     "lint": "eslint --ext .js,.vue src"
   },
-  "dependencies": {
-    "mpvue": "1.0.18"
-  },
+  "dependencies": {},
   "devDependencies": {
     "babel-core": "^6.22.1",
     "babel-eslint": "^8.2.3",
@@ -52,9 +50,9 @@
     "glob": "^7.1.2",
     "html-webpack-plugin": "^3.2.0",
     "http-proxy-middleware": "^0.18.0",
-    "mpvue-citypicker": "^1.0.4",
-    "mpvue-loader": "1.1.2",
-    "mpvue-template-compiler": "1.0.18",
+    "mpvue": "^2.0.0",
+    "mpvue-loader": "^2.0.0",
+    "mpvue-template-compiler": "^2.0.0",
     "mpvue-webpack-target": "^1.0.0",
     "optimize-css-assets-webpack-plugin": "^3.2.0",
     "ora": "^2.0.0",

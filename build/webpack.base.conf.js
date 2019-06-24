@@ -8,18 +8,17 @@ var glob = require('glob')
 var CopyWebpackPlugin = require('copy-webpack-plugin')
 var relative = require('relative')
 
-function resolve (dir) {
+function resolve(dir) {
   return path.join(__dirname, '..', dir)
 }
 
-function getEntry (rootSrc) {
-  var map = {};
-  glob.sync(rootSrc + '/pages/**/main.js')
-  .forEach(file => {
-    var key = relative(rootSrc, file).replace('.js', '');
-    map[key] = file;
+function getEntry(rootSrc) {
+  var map = {}
+  glob.sync(rootSrc + '/pages/**/main.js').forEach(file => {
+    var key = relative(rootSrc, file).replace('.js', '')
+    map[key] = file
   })
-   return map;
+  return map
 }
 
 const appEntry = { app: resolve('./test/main.js') }
@@ -35,14 +34,12 @@ module.exports = {
   output: {
     path: config.build.assetsRoot,
     filename: '[name].js',
-    publicPath: process.env.NODE_ENV === 'production'
-      ? config.build.assetsPublicPath
-      : config.dev.assetsPublicPath
+    publicPath: process.env.NODE_ENV === 'production' ? config.build.assetsPublicPath : config.dev.assetsPublicPath
   },
   resolve: {
     extensions: ['.js', '.vue', '.json'],
     alias: {
-      'vue': 'mpvue',
+      vue: 'mpvue',
       '@': resolve('test')
     },
     symlinks: false,
@@ -72,10 +69,8 @@ module.exports = {
           'babel-loader',
           {
             loader: 'mpvue-loader',
-            options: {
-              checkMPEntry: true
-            }
-          },
+            options: Object.assign({ checkMPEntry: true }, vueLoaderConfig)
+          }
         ]
       },
       {
@@ -106,12 +101,17 @@ module.exports = {
   },
   plugins: [
     new MpvuePlugin(),
-    new CopyWebpackPlugin([{
-      from: '**/*.json',
-      to: ''
-    }], {
-      context: 'src/'
-    }),
+    new CopyWebpackPlugin(
+      [
+        {
+          from: '**/*.json',
+          to: ''
+        }
+      ],
+      {
+        context: 'src/'
+      }
+    ),
     new CopyWebpackPlugin([
       {
         from: path.resolve(__dirname, '../static'),
