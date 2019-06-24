@@ -33,24 +33,20 @@ export default {
       pickerValue: [0, 0, 0],
       provinceDataList: [],
       cityDataList: [],
-      areaDataList: []
+      areaDataList: [],
+      showPicker: false
     };
   },
   created() {
-    this.handPickValueDefault(); // 对 pickerValueDefault 做兼容处理
+    let tempPickerValue = this.handPickValueDefault();
     this.provinceDataList = provinceData;
     this.cityDataList = cityData[this.pickerValueDefault[0]];
     this.areaDataList = areaData[this.pickerValueDefault[0]][this.pickerValueDefault[1]];
     setTimeout(() => {
-      this.pickerValue = this.pickerValueDefault;
+      this.pickerValue = tempPickerValue;
     });
   },
   props: {
-    /* 是否显示控件 */
-    showPicker: {
-      type: Boolean,
-      default: false
-    },
     /* 默认值 */
     pickerValueDefault: {
       type: Array,
@@ -83,17 +79,19 @@ export default {
       this.showPicker = true;
     },
     handPickValueDefault() {
+      let tempPickerValue = this.pickerValueDefault;
       if (this.pickerValueDefault !== [0, 0, 0]) {
         if (this.pickerValueDefault[0] > provinceData.length - 1) {
-          this.pickerValueDefault[0] = provinceData.length - 1;
+          tempPickerValue[0] = provinceData.length - 1;
         }
-        if (this.pickerValueDefault[1] > cityData[this.pickerValueDefault[0]].length - 1) {
-          this.pickerValueDefault[1] = cityData[this.pickerValueDefault[0]].length - 1;
+        if (this.pickerValueDefault[1] > cityData[tempPickerValue[0]].length - 1) {
+          tempPickerValue[1] = cityData[tempPickerValue[0]].length - 1;
         }
-        if (this.pickerValueDefault[2] > areaData[this.pickerValueDefault[0]][this.pickerValueDefault[1]].length - 1) {
-          this.pickerValueDefault[2] = areaData[this.pickerValueDefault[0]][this.pickerValueDefault[1]].length - 1;
+        if (this.pickerValueDefault[2] > areaData[tempPickerValue[0]][tempPickerValue[1]].length - 1) {
+          tempPickerValue[2] = areaData[tempPickerValue[0]][tempPickerValue[1]].length - 1;
         }
       }
+      return tempPickerValue;
     },
     pickerChange(e) {
       let changePickerValue = e.mp.detail.value;
