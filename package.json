@@ -1,6 +1,6 @@
 {
   "name": "mpvue-citypicker",
-  "version": "1.0.5",
+  "version": "1.0.6",
   "description": "基于 mpvue 框架的城市选择器，含 code ",
   "main": "src/mpvueCityPicker.vue",
   "author": "KuangPF <1633397286@qq.com>",
