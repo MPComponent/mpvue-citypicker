@@ -5526,7 +5526,7 @@ var areaData = [{
   "provinceCode": "35"
 }, {
   "code": "350182",
-  "name": "长乐市",
+  "name": "长乐区",
   "cityCode": "3501",
   "provinceCode": "35"
 }, {

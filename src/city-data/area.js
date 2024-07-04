@@ -4559,7 +4559,7 @@ var areaData = [
         "value": "350181"
       },
       {
-        "label": "长乐市",
+        "label": "长乐区",
         "value": "350182"
       }
     ],
